@@ -1,0 +1,61 @@
+{
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "extends": ["airbnb-typescript/base", "prettier"],
+  "plugins": ["@typescript-eslint", "prettier", "import"],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "no-restricted-syntax": [0],
+    "no-underscore-dangle": "off",
+    "no-await-in-loop": "off",
+    "class-methods-use-this": "off",
+    "max-classes-per-file": "off",
+    "import/prefer-default-export": "off",
+    "import/no-cycle": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "consistent-return": "off",
+    "no-param-reassign": [
+      "error",
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": ["sofar", "ctx"]
+      }
+    ],
+    "no-plusplus": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/no-floating-promises": "warn",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "memberLike",
+        "modifiers": ["private"],
+        "format": ["camelCase"],
+        "leadingUnderscore": "require"
+      }
+    ],
+    "prefer-destructuring": "off"
+  }
+}
